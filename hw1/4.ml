@@ -16,12 +16,12 @@ let rec exp : expr -> int = fun expression ->
         | PLUS (i1, i2) -> (exp i1) + (exp i2)
         | MINUS (i1, i2) -> (exp i1) - (exp i2)
 
-let rec cal : formula -> bool = fun form -> 
+let rec eval : formula -> bool = fun form -> 
         match form with 
         | TRUE -> true
         | FALSE -> false
-        | NOT f -> not (cal f)
-        | ANDALSO (f1, f2) -> (cal f1) && (cal f2)
-        | ORELSE (f1, f2) -> (cal f1) || (cal f2)
-        | IMPLY (f1, f2) -> ((cal f1) && (cal f2)) || not (cal f1)
+        | NOT f -> not (eval f)
+        | ANDALSO (f1, f2) -> (eval f1) && (eval f2)
+        | ORELSE (f1, f2) -> (eval f1) || (eval f2)
+        | IMPLY (f1, f2) -> ((eval f1) && (eval f2)) || not (eval f1)
         | LESS (e1, e2) -> (exp e1) < (exp e2)

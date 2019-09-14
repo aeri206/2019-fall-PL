@@ -1,3 +1,5 @@
+(* Dept of CSE, 2016-12805, Cho Aeri HW 1-5 *)
+
 type crazy2 = NIL 
             | ZERO of crazy2 
             | ONE of crazy2 

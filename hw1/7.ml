@@ -1,3 +1,5 @@
+(* Dept of CSE, 2016-12805, Cho Aeri HW 1-7 *)
+
 type expr = NUM of int
         | PLUS of expr * expr
         | MINUS of expr * expr
@@ -19,12 +21,3 @@ let rec eval : expr -> int = fun ex ->
         | _ -> let list_cal = List.map eval li in
                 List.hd (List.sort (fun x y -> y-x) list_cal)
         end
-    
-(*
-ᆯ 정의하세요. 이때, MAX [NUM 1, NUM 3, NUM 2] = 3, 즉
-MAX는 정수식 리 스트에서 가장 큰 정수를 찾아내는 정수식입니다. 
-빈 리스트의 경우는 0을 의 미하는 정수식 입니다. 
-*)
-
-(* List.map (eval) li;;
-let*)

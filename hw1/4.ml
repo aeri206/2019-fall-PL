@@ -1,3 +1,5 @@
+(* Dept of CSE, 2016-12805, Cho Aeri HW 1-4 *)
+
 type formula = TRUE
             | FALSE
             | NOT of formula

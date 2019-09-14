@@ -1,3 +1,5 @@
+(* Dept of CSE, 2016-12805, Cho Aeri HW 1-3 *)
+
 type team = Korea | France | Usa | Brazil | Japan | Nigeria | Cameroon
           | Poland | Portugal | Italy | Germany | Norway | Sweden | England
           | Argentina
